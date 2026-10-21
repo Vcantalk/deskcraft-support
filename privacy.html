@@ -10,7 +10,7 @@
 <main>
   <div class="kicker">Privacy Policy</div>
   <h1>桌面工坊 · 隐私政策</h1>
-  <p class="muted">生效日期：2026 年 10 月 19 日 · 适用于 macOS App「桌面工坊 DeskCraft Widgets」</p>
+  <p class="muted">生效日期：2026 年 10 月 21 日 · 适用于 macOS App「桌面工坊 DeskCraft Widgets」</p>
   <nav><a href="index.html">支持</a><a href="#english">English</a></nav>
 
   <div class="card">
@@ -26,6 +26,8 @@
     <li><strong>日历与提醒事项：</strong>只有在你授权后，App 才读取近期日程和提醒，用于「日程」组件；数据不会离开你的 Mac。</li>
     <li><strong>音乐：</strong>只有在你安装并授权自动化后，App 才通过 AppleScript 读取 Apple Music / Spotify 的当前曲目和播放状态，并发送播放/暂停等控制命令；不会上传歌曲信息。</li>
     <li><strong>购买：</strong>订阅和终身购买由 Apple StoreKit 处理。App 只读取交易校验结果和到期时间，不接触你的支付卡信息。</li>
+    <li><strong>跨设备同步（可选）：</strong>如果你在设置中启用「跨设备同步」，App 会把桌面快照写入你选择的 iCloud Drive 文件夹中的 <code>DeskCraftWidgets-Sync.json</code>。快照包含组件布局、场景、外观和偏好，可能包含便签/待办正文；不包含会员状态、文件收纳目录或相册原图。该文件存放在你的 iCloud Drive 中，由 Apple iCloud 按你的账户设置同步，开发者无法访问。</li>
+    <li><strong>诊断信息（可选）：</strong>「帮助与反馈」中的诊断信息只包含版本、组件类型/数量、权限状态和日志尾部，不包含便签/待办正文；由你主动复制或导出，不会自动上传。</li>
     <li><strong>日志：</strong>App 会在本机记录有限的运行日志，用于排查问题；日志不会自动上传。</li>
   </ul>
 
@@ -33,7 +35,7 @@
   <p>我们不出售、不出租、不共享你的个人数据。以下服务仅在对应功能中按需使用：</p>
   <ul>
     <li><strong>Open-Meteo：</strong>接收城市名或粗略坐标，返回天气预报。请参阅 Open-Meteo 的隐私政策。</li>
-    <li><strong>Apple：</strong>StoreKit 购买、iCloud/系统服务（如你使用）由 Apple 按其隐私政策处理。</li>
+    <li><strong>Apple：</strong>StoreKit 购买、iCloud Drive/系统服务（如你使用）由 Apple 按其隐私政策处理。跨设备同步文件由你的 iCloud 账户承载，开发者不运营同步服务器。</li>
     <li><strong>Spotify / Apple Music：</strong>播放控制通过本机 Apple Events 完成，不经过我们的服务器。</li>
   </ul>
 
@@ -41,7 +43,7 @@
   <p>位置、日历、提醒事项、通知和自动化权限都可以在系统设置 → 隐私与安全性中随时关闭。关闭后对应组件会降级或显示无权限提示，不影响其他组件。文件收纳目录可在 App 设置中重新选择。</p>
 
   <h2>4. 数据保留与删除</h2>
-  <p>数据保留在你的 Mac 上，直到你删除它。你可以在 App 内使用“重置全部数据”清除组件、布局、相册索引和本地缓存；也可以直接删除 App 及其数据目录。文件收纳中的文件不会被自动删除，需要你在 Finder 中处理。</p>
+  <p>数据保留在你的 Mac 上，直到你删除它。你可以在 App 内使用“重置全部数据”清除组件、布局、相册索引和本地缓存；也可以直接删除 App 及其数据目录。文件收纳中的文件不会被自动删除，需要你在 Finder 中处理。若启用了跨设备同步，停止同步或删除 iCloud Drive 中的 <code>DeskCraftWidgets-Sync.json</code> 即可移除云端快照。</p>
 
   <h2>5. 儿童</h2>
   <p>桌面工坊不是面向 13 岁以下儿童设计的服务，也不会主动收集儿童个人信息。</p>
@@ -55,7 +57,7 @@
   <hr style="border:0;border-top:1px solid #263241;margin:44px 0">
 
   <h1 id="english">DeskCraft Widgets · Privacy Policy</h1>
-  <p class="muted">Effective: October 19, 2026 · for the macOS app “DeskCraft Widgets”</p>
+  <p class="muted">Effective: October 21, 2026 · for the macOS app “DeskCraft Widgets”</p>
   <div class="card"><p><strong>In short:</strong> DeskCraft has no account system, no ads, and no analytics SDK. Widget settings, notes, to-dos, albums, and files stay on your Mac. The app reads location, calendars, reminders, or music only when you use those widgets and grant the corresponding macOS permission.</p></div>
   <h2>Data we process</h2>
   <ul>
@@ -66,14 +68,16 @@
     <li><strong>Calendars and reminders</strong> are read locally only after permission, for the Schedule widget. They are not uploaded.</li>
     <li><strong>Music</strong>: with automation permission, the app reads the current track/playback state from Apple Music or Spotify and sends playback commands locally. Track information is not uploaded.</li>
     <li><strong>Purchases</strong> are processed by Apple StoreKit. The app only reads verified transaction results and expiration dates; it never sees payment card details.</li>
+    <li><strong>Cross-device sync (optional)</strong>: if you enable “Cross-Device Sync”, the app writes a desktop snapshot to <code>DeskCraftWidgets-Sync.json</code> in an iCloud Drive folder you choose. The snapshot contains widget layouts, scenes, appearance, and preferences, and may include note/to-do text; it does not include membership status, File Tray folders, or original photos. The file lives in your iCloud Drive and is synced by Apple iCloud under your account; the developer cannot access it.</li>
+    <li><strong>Diagnostics (optional)</strong>: diagnostics in Help &amp; Feedback contain only version, widget types/counts, permission status, and a log tail—no note/to-do text. They are copied or exported by you and are never uploaded automatically.</li>
     <li><strong>Logs</strong> are written locally for troubleshooting and are not uploaded automatically.</li>
   </ul>
   <h2>Sharing</h2>
-  <p>We do not sell, rent, or share personal data. Open-Meteo receives a city name or coarse coordinates to return a forecast. Apple processes StoreKit purchases. Playback control is performed locally via Apple Events.</p>
+  <p>We do not sell, rent, or share personal data. Open-Meteo receives a city name or coarse coordinates to return a forecast. Apple processes StoreKit purchases and, if you enable sync, iCloud Drive storage; the developer does not operate a sync server. Playback control is performed locally via Apple Events.</p>
   <h2>Your choices</h2>
   <p>You can revoke location, calendar, reminders, notifications, and automation permissions at any time in System Settings → Privacy &amp; Security. You can choose a different storage folder in the app. Disabling a permission only affects the related widget.</p>
   <h2>Retention and deletion</h2>
-  <p>Data remains on your Mac until you delete it. Use “Reset All Data” in Settings to remove widgets, layouts, album indexes, and local caches, or delete the app and its data directory. Files in your chosen storage folder are not deleted automatically.</p>
+  <p>Data remains on your Mac until you delete it. Use “Reset All Data” in Settings to remove widgets, layouts, album indexes, and local caches, or delete the app and its data directory. Files in your chosen storage folder are not deleted automatically. If sync is enabled, stop syncing or delete <code>DeskCraftWidgets-Sync.json</code> from iCloud Drive to remove the cloud snapshot.</p>
   <h2>Children</h2>
   <p>DeskCraft is not directed to children under 13 and does not knowingly collect personal information from children.</p>
   <h2>Security</h2>
